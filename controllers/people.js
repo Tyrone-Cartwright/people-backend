@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // PEOPLE DELETE ROUTE
-router.delete('/people/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     // send all people
     res.json(await People.findByIdAndDelete(req.params.id));
@@ -25,7 +25,7 @@ router.delete('/people/:id', async (req, res) => {
 });
 
 // PEOPLE UPDATE ROUTE
-router.put('/people/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     // send all people
     res.json(
